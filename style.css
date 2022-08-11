@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-moderate-violet:hsl(263, 55%, 52%);
+    --clr-grayish-blue: hsl(217, 19%, 35%);
+    --clr-blackish-blue: hsl(219, 29%, 14%);
+    --clr-white:hsl(0, 0%, 100%);
+    
+}
+
+body{
+    height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    color: var(--clr-white);
+    border-radius: .5em;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+
+}
+                                                                                                                                                                                                                                                        
+.quotes{
+    position: absolute;
+    width: 6.25rem;
+    top: 0px;
+    right: 6rem;
+}
+
+.card-1{
+    background-color: var(--clr-moderate-violet);
+}
+
+.card-2{
+    background-color: var(--clr-grayish-blue);
+}
+
+.card-3{
+    color: black;
+    
+}
+
+.card-4{
+    background-color: var(--clr-blackish-blue);
+}
+
+.card-5{
+    color: black;
+    
+}
+
+
+.image-container{
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    height: 35px;
+    border-radius: 50%;
+    /* border: 2px solid hsl(263, 82%, 74%); */
+}
+
+.avatar-details{
+    margin-left: 10px;
+}
+
+.avatar-details > p{
+    margin:0
+}
+
+.role{
+    font-size: .80rem;
+}
+
+.sub-title,.role{
+    opacity: .6;
+}
+
+.name,.title{
+    opacity: .9;
+}
+
+.sub-title{
+    line-height: 1.25rem;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px,250px));
+    grid-template-rows: repeat(2,auto);
+    gap: 24px;
+}
+
+.card-1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start:  1;
+    grid-row-end:  1;
+}
+
+
+.card-2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start:  1;
+    grid-row-end:  1;
+
+}
+
+.card-5{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start:  1;
+    grid-row-end:  3;
+    
+}
+
+.card-3{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:  2;
+    grid-row-end:  3;
+
+}
+
+
+.card-4{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start:  2;
+    grid-row-end:  3;
+}
+
+@media (max-width: 400px){
+    body{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
